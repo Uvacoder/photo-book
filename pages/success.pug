@@ -1,0 +1,25 @@
+---
+title: Success
+---
+extends ../partials/page
+include ../partials/menu
+
+block body
+  #layout
+    +menu('contact')
+    main.text
+      header
+        img(alt="Dawn E Photography" src="/img/DawnEPhotoLogo-Transparent.png")
+      section
+        h1 Thank You
+        p I'll contact you shortly, I look forward to helping you remember the moments.
+
+block footer
+  p
+    a(href="/contact") Contact Me
+
+block scripts
+  script.
+    setTimeout(() => {
+      document.location.href = '/'
+    }, 15000)

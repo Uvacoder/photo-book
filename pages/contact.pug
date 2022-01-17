@@ -1,0 +1,27 @@
+---
+title: Contact
+endpoint: contact
+---
+extends ../partials/page
+include ../partials/menu
+
+block body
+  #layout
+    +menu('contact')
+    main
+      header
+        img(alt="Dawn E Photography" src="/img/DawnEPhotoLogo-Transparent.png")
+      section
+        p Hey, I'm Dawn. I'm a "no-frills" kind of lady. I honestly believe in the beauty of the simple everyday life. If you come over to my house any given day of the week, there is a high probability of toys strewn all over the floor, a clean basket of laundry in dire need of a good fluff and fold, and my kids engaged in some sort of high-decibel imaginative play.
+        img.floater(src="/img/featured/Dawn-Cat-Camera_800.jpeg" srcset="/img/featured/Dawn-Cat-Camera_800.jpeg 1x, /img/featured/Dawn-Cat-Camera_1600.jpeg 2x" alt="Dawn with her cat and camera")
+        p I am based in the village of Oregon, WI - just outside Madison.  I am a wife, a mother to two amazing kids, and have a variety of animals I feed and talk to. I love words, grammar, and sarcasm; coffee is my life-source; my favorite season is real fall, not trendy fall; and I’m at my most blissful in the middle of a long run with good music.
+        p I have always considered myself artistic, but photography has become my most favorite medium. Both of my children have brought out my passion to document our lives the way we live them. I have tried several times to do the perfectly posed family photo, but I always found myself appreciating the more candid and real-life photos more. Reliving a moment through a photograph is what I strive for in my work; looking at the photo and being present again with the thoughts and feelings of that exact time. That is what it is all about; living your truth and embracing your life just as it is.
+        p I want to extend my passion out to you; let me tell your story the way it ought to be told. Real. Chaotic. Beautiful.
+        include ../partials/contactForm
+
+block footer
+  a.formFooter-logoLink(href='https://www.jotform.com/?utm_source=formfooter&utm_medium=banner&utm_term=211038227258048&utm_content=jotform_logo&utm_campaign=powered_by_jotform_le' target='_blank')
+    img.formFooter-logo(src='https://cdn.jotfor.ms/assets/img/logo/logo-new@1x.png' alt='Jotform Logo')
+
+block scripts
+  script(src='/js/main.js')
