@@ -1,0 +1,324 @@
+@import 'variables.css';
+@import 'simple.css';
+@import 'myJot.css';
+
+h1 {
+  font-size: 1.8rem;
+}
+
+h2 {
+  font-size: 1.4rem;
+}
+
+h1,
+h2 {
+  margin-top: 1rem;
+  line-height: 2rem;
+}
+
+header {
+  margin-bottom: 10px;
+}
+
+/*
+ Add transition to containers so they can push in and out.
+ */
+#layout,
+#menu {
+  transition: all 0.3s ease-out;
+}
+
+#menu .logo {
+  width: 100%;
+  display: none;
+  transition: opacity 0.4s ease-in-out;
+}
+
+#menu .logo.active {
+  opacity: 1;
+}
+
+/* Animation for the menu items */
+@keyframes fade {
+  from {
+    transform: translateX(10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes title {
+  0% {
+    text-shadow: 0 -15px 18px #7a7a7a;
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  80% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    text-shadow: 0 5px 18px #7a7a7a;
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes images {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*
+ This is the parent `<div>` that contains the menu and the content area.
+ */
+#layout {
+  position: relative;
+  left: 0;
+  padding-left: 0;
+  padding-top: 50px;
+}
+
+#layout.active #menu {
+  left: 150px;
+  width: 150px;
+}
+
+#layout.active .menu-link {
+  left: 150px;
+}
+
+#menu {
+  top: 60px;
+  right: -150px;
+  width: 150px;
+  position: fixed;
+  z-index: 1000;
+  background: var(--bg);
+  border-bottom-left-radius: 10px;
+}
+
+#menu.active {
+  right: 0;
+}
+
+#menu img {
+  padding: 0.5rem;
+}
+
+#menu li:nth-of-type(1) a {
+  animation-delay: 0.2s;
+}
+
+#menu li:nth-of-type(2) a {
+  animation-delay: 0.4s;
+}
+
+#menu li:nth-of-type(3) a {
+  animation-delay: 0.6s;
+}
+
+#menu li:nth-of-type(4) a {
+  animation-delay: 0.8s;
+}
+
+#menu a {
+  opacity: 0;
+  position: relative;
+  -webkit-animation-name: fade;
+  -o-animation-name: fade;
+  animation-name: fade;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  font-family: Roboto, sans-serif;
+}
+
+.menu-bar {
+  background: rgba(41, 41, 41, 0.7);
+  backdrop-filter: blur(10px);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  text-align: right;
+  padding-right: 10px;
+  padding-top: 10px;
+}
+
+/* Gallery stuff */
+nav h1 {
+  opacity: 0;
+  font-size: 1.6rem;
+  margin: 2rem 0;
+  padding: 0;
+  line-height: 1.5rem;
+  font-family: 'Niconne', cursive;
+  animation: title 2s 1s forwards;
+  animation-fill-mode: forwards;
+  color: white;
+  text-align: center;
+}
+
+img.floater {
+  max-height: 300px;
+  display: block;
+  margin: auto;
+}
+
+#gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+#gallery a {
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+  opacity: 0;
+}
+
+#gallery a.vis {
+  animation: images 1s forwards;
+}
+
+#gallery img {
+  width: 100%;
+  object-fit: cover;
+  height: 200px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+footer .social-block {
+  border: 0;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-content: center;
+  align-items: center;
+}
+
+footer .social-link {
+  filter: brightness(0.3) grayscale(1);
+}
+
+footer .facebook {
+  width: 36px;
+  margin-right: 10px;
+}
+
+footer .contact {
+  margin-left: 5px;
+  width: 38px;
+}
+
+footer .description {
+  margin: 0;
+  color: #a2a2a2;
+}
+
+/* -- Responsive Styles (Media Queries) ------------------------------------- */
+@media (min-width: 400px) {
+  #menu {
+    right: -150px;
+  }
+  header {
+    margin-bottom: 25px;
+  }
+}
+
+@media (min-width: 700px) {
+  .text {
+    padding: 0 25px;
+  }
+
+  .img-block {
+    text-align: center;
+  }
+
+  .text img {
+    width: 50%;
+    margin: 10px auto;
+  }
+
+  img.floater {
+    display: inline;
+    float: right;
+    width: 60%;
+    max-width: 400px;
+    margin: 10px;
+  }
+
+  .header,
+  .content {
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+
+  #layout {
+    padding-left: 150px;
+    /* left col width "#menu" */
+    left: 0;
+  }
+
+  #menu {
+    margin-top: 200px;
+    margin-left: -150px;
+    position: fixed;
+    top: 0;
+    left: 150px;
+    border-bottom-left-radius: 0;
+  }
+
+  #menu .logo {
+    display: block;
+    opacity: 0;
+  }
+
+  .menu-bar {
+    display: none;
+  }
+
+  #gallery {
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 200px;
+  }
+
+  #gallery a {
+    width: initial;
+    margin: 0.4rem;
+  }
+
+  #gallery a:nth-child(6n + 4),
+  #gallery a:nth-child(6n + 1) {
+    grid-column: auto / span 2;
+    grid-row: auto / span 2;
+  }
+
+  #gallery a:nth-child(6n + 3),
+  #gallery a:nth-child(6n + 2) {
+    grid-column: auto / span 2;
+  }
+
+  #gallery img {
+    object-fit: cover;
+    height: 100%;
+  }
+}
+
+@media (min-width: 900px) {
+  #gallery {
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: 200px;
+  }
+}

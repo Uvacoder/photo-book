@@ -1,0 +1,37 @@
+:root {
+  --sans-font: Roboto, Noto, 'Segoe UI', Arial, Helvetica, 'Helvetica Neue', -apple-system, BlinkMacSystemFont,
+    sans-serif;
+  --header-font: Roboto Slab, sans-serif;
+  --mono-font: Consolas, Menlo, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  --base-fontsize: 1.15rem;
+  --header-scale: 1.25;
+  --line-height: 1.618;
+  --bg: hsl(0, 0%, 16%);
+  --accent-bg: hsl(0, 0%, 25%);
+  --text: hsl(0, 0%, 77%);
+  --text-light: hsl(0, 0%, 90%);
+  --link: #90caf9;
+  --border: hsl(0, 0%, 45%);
+  --accent: hsla(355, 87%, 66%, 1);
+  --accent-light: #90caf9;
+  --code: #d81b60;
+  --preformatted: #444;
+  --marked: #ffdd33;
+  --disabled: #efefef;
+}
+
+/* No dark mode for this site */
+@media (prefers-color-scheme: dark) {
+  /*:root {*/
+  /*  --bg: #212121;*/
+  /*  --accent-bg: #2b2b2b;*/
+  /*  --text: #dcdcdc;*/
+  /*  --text-light: #ababab;*/
+  /*  --border: #666;*/
+  /*  --accent: #ffb300;*/
+  /*  --accent-light: #ffecb3;*/
+  /*  --code: #f06292;*/
+  /*  --preformatted: #ccc;*/
+  /*  --disabled: #111;*/
+  /*}*/
+}

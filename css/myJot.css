@@ -1,0 +1,38 @@
+.form-all {
+  margin: 0 15px;
+  font-size: var(--base-fontsize);
+}
+
+.form-all li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+.form-sub-label {
+  display: block;
+  font-size: 0.9rem;
+}
+
+.form-label {
+  font-size: var(--base-fontsize);
+}
+
+input,
+textarea,
+select {
+  font-size: var(--base-fontsize);
+  appearance: auto;
+}
+
+.form-error-message {
+  color: var(--accent);
+  font-size: var(--base-fontsize);
+}
+
+.form-error-message img {
+  display: none;
+}
+
+.formFooter-logo {
+  filter: brightness(0.3) grayscale(1);
+}
