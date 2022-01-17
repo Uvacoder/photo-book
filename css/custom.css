@@ -1,0 +1,166 @@
+:root {
+  --black: hsl(0, 0%, 16%);
+  --dark-grey: hsla(213, 11%, 40%, 1);
+  --grey: hsla(231, 8%, 46%, 1);
+  --highlight: hsla(114, 88%, 94%, 1);
+  --accent: hsla(355, 87%, 66%, 1);
+  --contrast: hsl(0, 0%, 77%);
+}
+
+html,
+body {
+  background: var(--black);
+  color: var(--contrast);
+  font-family: Roboto, sans-serif;
+}
+
+main {
+  margin: 0 auto;
+  padding: 0 2em;
+  max-width: 800px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+/*
+Add transition to containers so they can push in and out.
+*/
+#layout,
+#menu,
+.menu-link {
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+/*
+This is the parent `<div>` that contains the menu and the content area.
+*/
+#layout {
+  position: relative;
+  left: 0;
+  padding-left: 0;
+}
+#layout.active #menu {
+  left: 150px;
+  width: 150px;
+}
+
+#layout.active .menu-link {
+  left: 150px;
+}
+
+#menu {
+  margin-left: -150px; /* "#menu" width */
+  width: 150px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 1000; /* so the menu or its navicon stays above all content */
+  overflow-y: auto;
+}
+/*
+All anchors inside the menu should be styled like this.
+*/
+#menu a {
+  border: none;
+  padding: 0.6em 0 0.6em 0.6em;
+}
+
+.pure-menu-link {
+  color: var(--highlight);
+}
+
+.pure-menu-active > .pure-menu-link,
+.pure-menu-link:hover,
+.pure-menu-link:focus,
+.pure-menu-selected > .pure-menu-link:visited {
+  color: var(--accent);
+  background: var(--dark-grey);
+}
+
+/* Gallery stuff */
+
+nav h1 {
+  font-size: 1rem;
+}
+
+#gallery {
+  display: flex;
+  flex-direction: column;
+}
+
+#gallery img {
+  width: 100%;
+  margin-bottom: 1rem;
+  object-fit: cover;
+  height: 200px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* -- Responsive Styles (Media Queries) ------------------------------------- */
+
+/*
+Hides the menu at `48em`, but modify this based on your app's needs.
+*/
+@media (min-width: 48em) {
+  .header,
+  .content {
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+
+  #layout {
+    padding-left: 150px; /* left col width "#menu" */
+    left: 0;
+  }
+
+  #menu {
+    left: 150px;
+  }
+
+  .menu-link {
+    position: fixed;
+    left: 150px;
+    display: none;
+  }
+
+  #layout.active .menu-link {
+    left: 150px;
+  }
+
+  #gallery {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #gallery img {
+    max-width: 300px;
+    margin: 0.5rem;
+  }
+
+  #gallery img:nth-child(2) {
+    max-width: 250px;
+  }
+
+  #gallery img:nth-child(4) {
+    max-width: 350px;
+  }
+}
+/*
+@media screen and (min-width: 640px) {
+  main {
+    max-width: 720px;
+  }
+}
+*/
