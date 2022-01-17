@@ -1,0 +1,12 @@
+{
+  "short_name": "Dawn E Photos",
+  "name": "Dawn E Photos",
+  "icons": [{
+    "src": "icon.png",
+    "type": "image/png",
+    "sizes": "192x192"
+  }],
+  "start_url": "/?utm_source=homescreen",
+  "background_color": "#292929",
+  "theme_color": "#292929"
+}
