@@ -1,0 +1,52 @@
+---
+title: About
+endpoint: contact
+---
+extends ../partials/page
+include ../partials/menu
+
+mixin imageBlock(name, alt)
+  .img-block
+    a.spotlight(href='/img/featured/' + name + '_1200.jpg' data-zoom='false' data-theme='false' data-player='false' data-autofit='false' data-fullscreen='false' data-title='false')
+      img(loading='lazy' src='/img/featured/' + name + '_600.jpg' alt=alt)
+
+block body
+  #layout
+    +menu('about')
+    main
+      header
+        img(alt="Dawn E Photography" src="/img/DawnEPhotoLogo-Transparent.png")
+      section.text
+        h1 Documentary Photography
+        p So you’re here because you want some family photos. You’re trying to choose the perfect photographer, but finding it to be difficult and overwhelming. I get it. The whole world is oversaturated with information it makes decisions hard. I have compiled a quick list of reasons why documentary family photography - also known as family photojournalism - is by far the best, and most significant choice.
+        +imageBlock('2018-03-22_0810_DSC_9543', 'Grandma and Grandpa with baby on couch')
+
+        h2 Capture reality, not the latest trend
+        p You want unique and meaningful photographs of your family, not matching outfits and awkwardly holding hands walking around in a forgettable park. Your family is worthy of beautiful portraits that capture you and your authentic selves in places that have meaning to you.
+        +imageBlock('2020_08_12_1735_DSC_2153', 'Girl with bucket on her head playing in the pool with her brother')
+
+        h2 Memories
+        p It’s popular to talk about “capturing this season of life” that you’re currently in, and to sound completely trite: that’s absolutely what it’s all about. Looking at a photo from a documentary session can bring you right back to what it felt like to be in that moment in time. Instead of remembering all the crying from your toddlers about how you just wanted them to smile for the camera, you can oogle their little fingers and toes, adorable squishy cheeks, and their personalities for years to come. <em>Remember the moment, not the session.</em>
+        +imageBlock('2018-12-29_0939_DSC_7053', 'Dad playing with son who is jumping in the air')
+
+        h2 Emotions
+        p Your kiddo wipes out and the big lip-wobbling sobs ensue; your teen is in their awkward eye-rolling stage; your partner tells a fantastically corny joke and you get a catching case of the giggles. All of these emotions are encouraged and REAL. You can’t fabricate real emotion, and that makes all the difference.
+        +imageBlock('2018-02-27_1634_DSC_8568', 'Daughter crying near dad with guitar')
+
+        h2 Great for introverts or camera shy
+        p Does anyone really ever feel that comfortable getting their photo taken? Honestly, it feels like you’re being exposed and put on stage. With family photojournalism, you don’t have to worry about looking perfect, because SPOILER ALERT: you already are perfect, just as you are. Just be yourself, and I can make some gorgeous photographs of that.
+        +imageBlock('20201006-DSC_3630', 'Two kids in shark costumes sitting in the backseat of a car')
+
+        h2 No bossing or directing
+        p Telling people where to stand or how to hold their hands makes me as uncomfortable as you; and it’s awkward. So there will be none of that. Posing looks just as it sounds: posed. Relax and enjoy yourselves as you usually would, there might even be moments you won’t realize I’m there. I’ll be there to spend time along with you and your family and not telling you what to do the whole time. We’ll be good friends by the end of the session, as I’m just along for the ride.
+        +imageBlock('20210416-DSC_8863', 'Two kids sitting amongst their toys inside cardboard boxes')
+
+        p Doesn't this sound like the most lovely thing ever? Family photojournalism is for everyone and that is why you have read this far. Now send me an email, so I know you’re interested, and we’ll chat about what your session will look like in detail.
+        p Can’t wait to hear from you.
+
+block footer
+  a.social-link(href="/contact")
+    img.contact(src="/img/icons/contact.svg")
+
+block scripts
+  script(src='/js/main.js')
