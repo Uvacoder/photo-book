@@ -1,0 +1,77 @@
+title Contact Me
+link(type='text/css' media='print' rel='stylesheet' href='https://cdn.jotfor.ms/css/printForm.css?3.3.24700')
+link(type='text/css' rel='stylesheet' href='https://cdn.jotfor.ms/css/styles/payment/payment_styles.css?3.3.24700')
+link(type='text/css' rel='stylesheet' href='https://cdn.jotfor.ms/css/styles/payment/payment_feature.css?3.3.24700')
+script(src='https://cdnjs.cloudflare.com/ajax/libs/punycode/1.4.1/punycode.min.js')
+script(src='https://cdn.jotfor.ms/static/prototype.forms.js' type='text/javascript')
+script(src='https://cdn.jotfor.ms/static/jotform.forms.js?3.3.24700' type='text/javascript')
+script(type='text/javascript').
+  JotForm.setConditions([{"action":[{"id":"action_1618451138443","field":"3","visibility":"Require","isError":false}],"id":"1618451157966","index":"0","link":"Any","priority":"0","terms":[{"id":"term_1618451138443","field":"3","operator":"isEmpty","value":"","isError":false}],"type":"require"}]);
+  JotForm.init(function(){
+    if (window.JotForm && JotForm.accessible) $('input_4').setAttribute('tabindex',0);
+    JotForm.setCustomHint( 'input_4', 'Type here...' );
+    JotForm.newDefaultTheme = true;
+    JotForm.extendsNewTheme = false;
+    JotForm.newPaymentUIForNewCreatedForms = true;
+    JotForm.newPaymentUI = true;
+    JotForm.alterTexts(undefined);
+    JotForm.clearFieldOnHide="disable";
+    JotForm.submitError="jumpToFirstError";
+    /*INIT-END*/
+  });
+  JotForm.prepareCalculationsOnTheFly([null,{"name":"contactMe","qid":"1","text":"Contact Me","type":"control_head"},{"name":"submit2","qid":"2","text":"Submit","type":"control_button"},{"description":"","name":"yourEmail","qid":"3","subLabel":"example@example.com","text":"Your Email","type":"control_email"},{"description":"","name":"anyThoughts","qid":"4","subLabel":"","text":"Any thoughts you have for your sesson?","type":"control_textarea"}]);
+  setTimeout(function() {
+    JotForm.paymentExtrasOnTheFly([null,{"name":"contactMe","qid":"1","text":"Contact Me","type":"control_head"},{"name":"submit2","qid":"2","text":"Submit","type":"control_button"},{"description":"","name":"yourEmail","qid":"3","subLabel":"example@example.com","text":"Your Email","type":"control_email"},{"description":"","name":"anyThoughts","qid":"4","subLabel":"","text":"Any thoughts you have for your sesson?","type":"control_textarea"}]);}, 20);
+form#211038227258048.jotform-form(action='https://submit.jotform.com/submit/211038227258048/' method='post' name='form_211038227258048' accept-charset='utf-8' autocomplete='on')
+  input(type='hidden' name='formID' value='211038227258048')
+  input#JWTContainer(type='hidden' value='')
+  input#cardinalOrderNumber(type='hidden' value='')
+  .form-all(role='main')
+    h1#header_1.form-header(data-component='header')
+      | Contact Me
+      li#id_3.form-line.jf-required(data-type='control_email')
+        label#label_3.form-label.form-label-top.form-label-auto(for='input_3')
+          | Your Email
+          span.form-required
+            | *
+        #cid_3.form-input-wide.jf-required(data-layout='half')
+          span.form-sub-label-container(style='vertical-align:top')
+            input#input_3.form-textbox(type='email' name='q3_yourEmail' class='validate[required, Email]' value='' data-component='email' aria-labelledby='label_3 sublabel_input_3' required='')
+            label#sublabel_input_3.form-sub-label(for='input_3' style='min-height:13px' aria-hidden='false')  example@example.com
+      li#id_6.form-line.jf-required(data-type='control_dropdown')
+        label#label_6.form-label.form-label-top.form-label-auto(for='input_6')
+          | What type of session are you looking for?
+          span.form-required
+            | *
+        #cid_6.form-input-wide.jf-required(data-layout='half')
+          select#input_6.form-dropdown(class='validate[required]' name='q6_whatType' data-component='dropdown' required='' aria-labelledby='label_6')
+            option(value='Full Day')  Full Day
+            option(value='1/2 Day')  1/2 Day
+            option(value='2 Hours')  2 Hours
+      li#id_4.form-line(data-type='control_textarea')
+        label#label_4.form-label.form-label-top.form-label-auto(for='input_4')  Any thoughts you have for your session?
+        #cid_4.form-input-wide(data-layout='full')
+          textarea#input_4.form-textarea(name='q4_anyThoughts' data-component='textarea' aria-labelledby='label_4')
+      li#id_2.form-line(data-type='control_button')
+        #cid_2.form-input-wide(data-layout='full')
+          .form-buttons-wrapper.form-buttons-auto.jsTest-button-wrapperField(data-align='auto')
+            button#input_2.form-submit-button.form-submit-button-simple_grey.submit-button.jf-form-buttons.jsTest-submitField(type='submit' data-component='button' data-content='')
+              | Submit
+      li(style='display:none')
+        | Should be Empty:
+        input(type='text' name='website' value='')
+  script.
+    JotForm.showJotFormPowered = "new_footer";
+  script.
+    JotForm.poweredByText = "Powered by JotForm";
+  input#simple_spc.simple_spc(type='hidden' name='simple_spc' value='211038227258048')
+  script(type='text/javascript').
+    var all_spc = document.querySelectorAll("form[id='211038227258048'] .si" + "mple" + "_spc");
+    for (var i = 0; i < all_spc.length; i++)
+    {
+      all_spc[i].value = "211038227258048-211038227258048";
+    }
+script(type='text/javascript').
+  JotForm.ownerView=true;
+script(src='https://cdn.jotfor.ms//js/vendor/smoothscroll.min.js?v=3.3.24700')
+script(src='https://cdn.jotfor.ms//js/errorNavigation.js?v=3.3.24700')

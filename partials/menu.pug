@@ -1,0 +1,16 @@
+mixin menu(current)
+  .menu-bar
+    a.menu-link(href='#menu')
+      img(src='/img/menu.svg')
+  #menu
+    img.logo(src='/img/DawnEPhotoLogo-Transparent.png' alt="Dawn E Photography")
+    nav
+      ul
+        li
+          a(href='/' class='current') Gallery
+        li
+          a(href='/about') About
+        //li
+        //  a(href='/experiences') Experiences
+        li
+          a(href='/contact') Contact
