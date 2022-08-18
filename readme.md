@@ -1,5 +1,5 @@
 # Dawn E Photos
-
+----
 Image resize script:
 
 ```
